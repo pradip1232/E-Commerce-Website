@@ -171,7 +171,11 @@
     width: 80%;
     transition: all .4s ease-out;
 }
-
+@media only screen and (max-width:376px){
+    .contact-info-item{
+        width: 65%;
+    }
+}
 
 .contact-info-item:hover {
     -webkit-box-shadow: 0 20px 40px rgba(72, 78, 85, .6);

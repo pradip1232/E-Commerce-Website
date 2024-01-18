@@ -606,6 +606,8 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 0px; 
+    /* padding-left: 0px; added for mobile responsive hexagon */
 }
 
 @media (min-width: 576px) {
@@ -618,6 +620,7 @@ pre code {
     .container {
         max-width: 720px;
     }
+    
 }
 
 @media (min-width: 992px) {

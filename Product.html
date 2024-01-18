@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+    <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -67,6 +66,24 @@
     <link rel="stylesheet" href="filter/nsaaaaaaaa.css">
     <link rel="stylesheet" href="MyCustomCss/pop-up.css">
 
+        <style>
+            /* .form-control-search-btn {
+            display: block;
+            height: 36px;
+            position: relative;
+            left: -25px;
+            width: 100% !important;
+            
+        } */
+        .form-control-search-btn {
+            /* display: block; */
+            height: 36px;
+            position: relative;
+            left: -191px;
+            width: 110% !important;
+            font-size: 2rem;
+        }
+        </style>
     <style>
         header {
             box-shadow: 2px 5px 20px 2px rgba(95, 94, 94, 0.8);
@@ -145,7 +162,10 @@
                         <input type="search" id="form1" placeholder="Search..." class="form-control-search-btn" />
 
                     </div>
-                    <button type="button" class="btn2 search-btn2" style="    width: 90px; height: 37px;">
+                    <button type="button" class="btn2 search-btn2" style="width: 90px;
+    height: 37px;
+    position: relative;
+    left: -60px;">
                         <h3 id="search-btn">SEARCH</h3>
                     </button>
                 </div>
@@ -501,7 +521,7 @@
                                     </p>
                                 </div>
 
-                                <div class="price">
+                                <div class="price" id="price_P1">
                                     00
                                 </div>
                             </div>
@@ -518,19 +538,54 @@
                                 </button>
                                 <button class="info" onclick="redirect()">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right  bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                                         </svg></i> <span>View More</span>
                                 </button>
-
+<style>
+    select{
+        color: white;
+        border: none;
+        font-size: 15px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        background-color: #F79410;
+        width: 70px;
+    }
+</style>
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i>
+                                    <span>
+                                        <select class="size-options" id="Select1p1" onchange="pricechange1()">
+                                            <option value="" selected>Size</option>
+                                            <option value="1kg" > 1 kg</option>
+                                            <option value="2kg" > 2 kg</option>
+                                            <option value="3kg" > 3 kg</option>
+                                        </select>
+                                    </span>
                                 </button>
 
                             </div>
                         </div>
+                        <script>
+                            function pricechange1() {
+                                var item = document.getElementById("Select1p1");
+                                var itemValue = item.options[item.selectedIndex].value;
+                                console.log( "in p3 ",  itemValue);
+                                if (itemValue === '1kg') {
+                                    document.getElementById("price_P1").innerHTML = '10';
+                                } else if (itemValue === '2kg') {
+                                    document.getElementById("price_P1").innerHTML = '20';
+                                } else if (itemValue === '3kg') {
+                                    document.getElementById("price_P1").innerHTML = '30';
+                                }
+                                else{
+                                    document.getElementById("price_P1").innerHTML = '00';
+                                }
+                            }
+                        </script>
                     </main>
                 </li>
                 <li class="mix color-1 check1 radio3 option4">
@@ -550,7 +605,7 @@
                                     </p>
                                 </div>
 
-                                <div class="price">
+                                <div class="price"  id="price_P2">
                                     00
                                 </div>
                             </div>
@@ -568,7 +623,7 @@
 
                                 <button class="info" onclick="redirect()">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -576,11 +631,36 @@
                                 </button>
 
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i>
+                                    <span>
+                                        <select class="size-options" id="Select2p2" onchange="pricechange2()">
+                                            <option value="" selected>Size</option>
+                                            <option value="1kg" > 1 kg</option>
+                                            <option value="2kg" > 2 kg</option>
+                                            <option value="3kg" > 3 kg</option>
+                                        </select>
+                                    </span>
                                 </button>
 
                             </div>
                         </div>
+                        <script>
+                            function pricechange2() {
+                                var item = document.getElementById("Select2p2");
+                                var itemValue = item.options[item.selectedIndex].value;
+                                console.log( "in p3 ",  itemValue);
+                                if (itemValue === '1kg') {
+                                    document.getElementById("price_P2").innerHTML = '10';
+                                } else if (itemValue === '2kg') {
+                                    document.getElementById("price_P2").innerHTML = '20';
+                                } else if (itemValue === '3kg') {
+                                    document.getElementById("price_P2").innerHTML = '30';
+                                }
+                                else {
+                                    document.getElementById("price_P2").innerHTML = '00';
+                                }
+                            }
+                        </script>
                     </main>
                 </li>
                 <li class="mix color-2 check1 radio2 option3">
@@ -600,7 +680,7 @@
                                     </p>
                                 </div>
 
-                                <div class="price">
+                                <div class="price"  id="price_P3">
                                     00
                                 </div>
                             </div>
@@ -616,19 +696,45 @@
 
                                 <button class="info">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                                         </svg></i> <span>View More</span>
                                 </button>
-
+                                
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i>
+                                    <span>
+                                        <select class="size-options" id="Select3p3" onchange="pricechange3()">
+                                            <option value="" selected>Size</option>
+                                            <option value="1kg" > 1 kg</option>
+                                            <option value="2kg" > 2 kg</option>
+                                            <option value="3kg" > 3 kg</option>
+                                        </select>
+                                    </span>
                                 </button>
 
                             </div>
                         </div>
+                        <script>
+                            function pricechange3() {
+                                var item = document.getElementById("Select3p3");
+                                var itemValue = item.options[item.selectedIndex].value;
+                                console.log( "in p3 ",  itemValue);
+                                if (itemValue === '1kg') {
+                                    document.getElementById("price_P3").innerHTML = '10';
+                                } else if (itemValue === '2kg') {
+                                    document.getElementById("price_P3").innerHTML = '20';
+                                } else if (itemValue === '3kg') {
+                                    document.getElementById("price_P3").innerHTML = '30';
+                                }
+                                else {
+                                    document.getElementById("price_P3").innerHTML = '00';
+                                }
+                            }
+                        </script>
+
                     </main>
                 </li>
                 <li class="mix color-1 check3 radio2 option4">
@@ -648,7 +754,7 @@
                                     </p>
                                 </div>
 
-                                <div class="price">
+                                <div class="price" id="price_P4">
                                     00
                                 </div>
                             </div>
@@ -664,7 +770,7 @@
 
                                 <button class="info">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right  bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -672,11 +778,36 @@
                                 </button>
 
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i>
+                                    <span>
+                                        <select class="size-options" id="Select4p4" onchange="pricechange4()">
+                                            <option value="" selected>Size</option>
+                                            <option value="1kg" > 1 kg</option>
+                                            <option value="2kg" > 2 kg</option>
+                                            <option value="3kg" > 3 kg</option>
+                                        </select>
+                                    </span>
                                 </button>
 
                             </div>
                         </div>
+                        <script>
+                            function pricechange4() {
+                                var item = document.getElementById("Select4p4");
+                                var itemValue = item.options[item.selectedIndex].value;
+                                console.log( "in p3 ",  itemValue);
+                                if (itemValue === '1kg') {
+                                    document.getElementById("price_P4").innerHTML = '10';
+                                } else if (itemValue === '2kg') {
+                                    document.getElementById("price_P4").innerHTML = '20';
+                                } else if (itemValue === '3kg') {
+                                    document.getElementById("price_P4").innerHTML = '30';
+                                }
+                                else {
+                                    document.getElementById("price_P4").innerHTML = '00';
+                                }
+                            }
+                        </script>
                     </main>
                 </li>
                 <!-- <li class="mix color-1 check3 radio3 option2"><img
@@ -715,7 +846,7 @@
 
                                 <button class="info">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right  bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -723,7 +854,7 @@
                                 </button>
 
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i> <span>Size</span>
                                 </button>
 
                             </div>
@@ -763,7 +894,7 @@
 
                                 <button class="info">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right  bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -771,7 +902,7 @@
                                 </button>
 
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i> <span>Size</span>
                                 </button>
 
                             </div>
@@ -811,7 +942,7 @@
 
                                 <button class="info">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right  bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -819,7 +950,7 @@
                                 </button>
 
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i> <span>Size</span>
                                 </button>
 
                             </div>
@@ -859,7 +990,7 @@
 
                                 <button class="info">
                                     <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-arrow-right"
+                                            height="16" fill="currentColor" class="bi bi-arrow-right  bi-arrow-right-hover"
                                             viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -867,7 +998,7 @@
                                 </button>
 
                                 <button class="size">
-                                    <i class="info-i-con">Size</i> <span></span>
+                                    <i class="info-i-con">Size</i> <span>Size</span>
                                 </button>
 
                             </div>

@@ -220,7 +220,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
     /*changed from 20px to 10px (later) */
     /* added later*/
     grid-template-rows: 50px 50px;
@@ -253,10 +253,14 @@ h1 {
     display: flex;
     border: double 1em transparent;
     background-image: linear-gradient(white, white),
-        linear-gradient(to bottom, #00723c 5%, white);
+        linear-gradient(to bottom, #00723c 15%, white 68%);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    height: 230px;
+    height: 214px;
+}
+.image {
+    width: 178px;
+    height: 180px;
 }
 
 .image img {
@@ -271,18 +275,87 @@ h1 {
     font-size: 1.6rem;
     color: #ff7a00;
 }
+/* .heding_text.text1 {
+    text-align: center;
+} */
+.heding_text.text1 {
+    text-align: center;
+    /* display: flex; */
+    position: relative;
+    top: -16px;
+}
 
+.heding_text.heading_2345_Cost_Effectiveness {
+    top: 31px;
+    position: relative;
+}
+.heading_2345_Innovation{
+    top: -16px;
+    position: relative;
+}
+
+.heding_text.heading_2345_Sustainable_products {
+    text-align: center;
+}
+
+.heding_text.heading_2345_Positive_Approach {
+    position: relative;
+    top: 24px;
+}
+
+.heding_text.heding_text_Nature_Relationship {
+    position: relative;
+    top: -14px;
+}
 .heding_text {
     margin-top: 30px;
     margin-bottom: -50px;
 }
 
-.image:nth-child(2n+1) {
+.image:nth-child(2n) {
     background-image: linear-gradient(white, white),
-        linear-gradient(to bottom, #e0974a 5%, white);
+        linear-gradient(to top, #e0974a 15%, white 68%);
+        /* linear-gradient(to top, white); */
 
 }
+/* lhdsfj;l */
 
+img#Nature_Relationship_image {
+    top: 23px;
+    position: relative;
+}
+img#Nature_Relationship_image {
+    width: 82px;
+    margin-bottom: 19px;
+    margin-top: 22px;
+    height: 158px;
+}
+
+.images-container .image img {
+    width: 100px;
+    height: 230px;
+}
+
+img.Innovation-image.Sustainable_products {
+    padding-bottom: 10px;
+    padding-top: 45px;
+}
+
+.heding_text {
+    font-size: 23px;
+    font-family: sans-serif;
+    text-align: center;
+}
+img.Innovation-image {
+    position: relative;
+    left: -1px;
+    bottom: -9px;
+}
+/* lhdsfj;l */
+img.Trust-And-Transperancy {
+    padding-bottom: 22px;
+    padding-top: 75px;
+}
 .Trust-And-Transperancy {
     padding-bottom: 46px;
     padding-top: 52px;
@@ -1303,6 +1376,12 @@ a:hover {
     transform: rotate(180deg);
     cursor: pointer;
 }
+@media only screen and (max-width : 376px){
+    .hexagon12{
+        width: 180px;
+        height: 102px;
+    }
+}
 
 .hexagon12:hover .botm-hexa-cont img {
     transform: scale3d(1.5);
@@ -1421,7 +1500,7 @@ a:hover {
     .hexa-col-1 {
         height: 100%;
         /* background-color: #00723c; */
-        width: 52%;
+        width: 51%;
     }
 
 
@@ -1546,6 +1625,8 @@ a:hover {
         width: 100%;
         display: block;
         margin-bottom: -51px;
+        padding-left: 0px;
+        /* prashant added padding-left: 0px; for mobile responsive */
     }
 
 
@@ -1691,6 +1772,16 @@ a:hover {
         height: 50vh;
     }
 }
+@media only screen and (max-width:376px){
+    .about-section {
+        height: 75vh!important;
+    }
+    .hexa-shape {
+        height: 100vh;
+        /* width: auto; */
+        /* padding: 10px; */
+    }
+}
 
 @media (max-width: 450px) {
     .contact-info-item:hover {
@@ -1735,7 +1826,8 @@ a:hover {
         /* padding: 20px 0; */
         border-bottom: 1px #f79410 solid !important;
         transition: 0.5s;
-        margin-left: 33px;
+        margin-left: 7px; 
+        /* prashant changed margin-left: 33px; to 7px mobile responsive*/
         font-size: 30px;
         border-radius: 5px;
         width: 184px;
@@ -1866,3 +1958,38 @@ a:hover {
 
 
 /* Additional styles for mobile responsiveness */
+
+
+/* responsive mobile slider image  */
+@media only screen and (min-width: 480px) {
+    .mobile_slider_responsive {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .desktop-slider-image {
+        display: none !important;
+    }
+}
+/* END mobile slider  */
+
+/* slider next button "product category" */
+@media only screen and (max-width: 376px){
+    button.owl-next {
+        left: 270px!important;
+    }
+}
+@media only screen and (max-width: 481px) {
+    button.owl-next {
+        left: 320px;
+    }
+}
+
+/* slider next button "product category" */
+
+/* about us TEXT padding mobole responsive */
+div#about-text-animation {
+    padding-left: 25px;
+}
+/* about us TEXT padding mobole responsive */
