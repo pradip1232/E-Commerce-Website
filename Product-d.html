@@ -291,15 +291,47 @@
                                     <p>FistSEcond
                                     </p>
                                 </div>
+                                <div class="_p-list">
+                                    <span> <b style="font-weight: 500;">Size</b> </span>
+                                    <select style="width: 4vw;" onchange="priceChange()" id="sizeP">
+                                        <option selected value="1">1kg</option>
+                                        <option value="2">2kg</option>
+                                        <option value="3">3kg</option>
+                                        <option value="4">4kg</option>
+                                    </select>
+                                </div>
+                                <script>
+                                    function priceChange() {
+                                        var item = document.getElementById("sizeP");
+                                        var itemValue = item.options[item.selectedIndex].value;
+                                        if (itemValue === '1') {
+                                            document.getElementById("priceRs").innerHTML = '10';
+                                        } else if (itemValue === '2') {
+                                            document.getElementById("priceRs").innerHTML = '20';
+                                        } else if (itemValue === '3') {
+                                            document.getElementById("priceRs").innerHTML = '30';
+                                        }
+                                        else {
+                                            document.getElementById("priceRs").innerHTML = '00';
+                                        }
+                                    }
+                                    function priceChange2(){
+                                        var itemQuantity = document.getElementById("number").value;
+                                        let price = parseInt(itemQuantity) * parseInt(document.getElementById("priceRs").innerHTML) ;
+                                        console.log(price);
+                                        document.getElementById("priceRs").innerHTML = `${price}`;
+                                    }
+                                </script>
                                 <div class="p-list">
                                     <span> M.R.P. : <i class="fa fa-inr"></i> <del> 00 </del> </span>
-                                    <span class="price22"> Rs. 00 </span>
+                                    Rs.
+                                    <span class="price22" id="priceRs"> 10 </span>
                                 </div>
                                 <div class="_p-add-cart">
                                     <div class="_p-qty">
                                         <span>Add Quantity</span>
                                         <div class="value-button decrease_" id="" value="Decrease Value">-</div>
-                                        <input type="number" name="qty" id="number" value="1" />
+                                        <input type="number" name="qty" id="number" value="1" onchange="priceChange2()"/>
                                         <div class="value-button increase_" id="" value="Increase Value">+</div>
                                     </div>
                                 </div>

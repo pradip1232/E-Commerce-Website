@@ -252,7 +252,7 @@ h1 {
     width: 300px;
     display: flex;
     border: double 1em transparent;
-    background-image: linear-gradient(white, white),
+    background-image: linear-gradient(white, #8080802e),
         linear-gradient(to bottom, #00723c 15%, white 68%);
     background-origin: border-box;
     background-clip: content-box, border-box;
@@ -313,7 +313,7 @@ h1 {
 }
 
 .image:nth-child(2n) {
-    background-image: linear-gradient(white, white),
+    background-image: linear-gradient(white, #8080802e),
         linear-gradient(to top, #e0974a 15%, white 68%);
         /* linear-gradient(to top, white); */
 
